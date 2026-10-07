@@ -1,0 +1,250 @@
+[
+  {
+    "url": "https://chatgpt.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://grok.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.perplexity.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://gemini.google.com/app?hl=ko",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://felo.ai/ko/search",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.genspark.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://liner.com/ko",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://storm.genie.stanford.edu/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://consensus.app/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://notebooklm.google.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.alphaxiv.org/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://claude.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://chat.qwen.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://chat.deepseek.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://chat.mistral.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://copilot.microsoft.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://poe.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://clovanote.naver.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://tiro.ooo/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://felo.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.notta.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.notion.so/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://obsidian.md/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://claude.ai",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://gamma.app",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.canva.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.napkin.ai",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://felo.ai",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://mapify.so",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.aippt.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://anifusion.ai",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://novelai.net",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.storytribeapp.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.figma.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://ugic.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://creatie.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://wegic.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.framer.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://dora.run/",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "url": "https://uizard.io/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.usegalileo.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.midjourney.com/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.leonardo.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://aitestkitchen.withgoogle.com/tools/image-fx",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.recraft.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://ideogram.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.freepik.com/ai/image-generator",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://blackforestlabs.ai/",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://higgsfield.ai",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.hedra.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://runwayml.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://klingai.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://lumalabs.ai/dream-machine",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://pika.art",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://elevenlabs.io",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://fish.audio",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://suno.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://typecast.ai/kr",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://www.make.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://dify.ai",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://n8n.io",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  },
+  {
+    "url": "https://zapier.com",
+    "error": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>"
+  }
+]

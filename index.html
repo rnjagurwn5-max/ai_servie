@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 서비스 가이드 | 분야별 AI 도구 모음</title>
+  <meta name="description" content="리서치, 글쓰기, 이미지, 영상 등 분야별 AI 서비스의 강점과 요금을 한눈에 비교해 보세요.">
+  <meta name="theme-color" content="#1b2a5e">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#service-grid">서비스 목록으로 건너뛰기</a>
+  <div class="brand-bar"><div class="container brand-inner"><a class="brand" href="index.html"><span class="brand-symbol">✦</span> AI GUIDE</a><span class="brand-caption">나에게 맞는 AI를 찾는 가장 쉬운 방법</span></div></div>
+  <!-- 사이트 소개 -->
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">분야별 AI 서비스 가이드</p>
+      <h1>어떤 일에 어떤 <mark>AI</mark>를 쓸까?</h1>
+      <p class="lead">
+        <strong id="total-count">0</strong>개의 AI 서비스를 분야별로 정리했어요.
+        카드를 누르면 서비스 사이트가 새 탭으로 열려요.
+      </p>
+    </div>
+  </header>
+
+  <!-- 상단 고정: 검색창 + 분야 필터 -->
+  <div class="toolbar">
+    <div class="container">
+      <label class="search">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+          <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input id="search" type="search" placeholder="서비스 이름이나 하고 싶은 일로 검색 (예: 회의록, PPT)" autocomplete="off" aria-label="서비스 검색">
+      </label>
+      <nav class="category-filter" id="category-filter" aria-label="분야 필터"></nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="result-bar">
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <nav class="subcategory-filter" id="subcategory-filter" aria-label="강점별 세부 분야" hidden></nav>
+      <div class="pricing-filter" id="pricing-filter" role="group" aria-label="요금 필터">
+        <button type="button" class="chip is-active" data-pricing="all" aria-pressed="true">요금 전체</button>
+        <button type="button" class="chip" data-pricing="무료">무료</button>
+        <button type="button" class="chip" data-pricing="무료+유료">무료+유료</button>
+        <button type="button" class="chip" data-pricing="유료">유료</button>
+      </div>
+    </div>
+
+    <h2 class="sr-only">분야별 AI 서비스</h2>
+    <section class="grid" id="service-grid" aria-label="서비스 목록"></section>
+
+    <div class="empty" id="empty" hidden>
+      <p>조건에 맞는 서비스가 없어요.</p>
+      <button type="button" class="btn-reset" id="reset">검색·필터 초기화</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>요금은 <span id="updated-at"></span> 공식 요금 페이지 기준이며, 별도 표기가 없으면 월 결제 기준 USD예요. 가격은 바뀔 수 있으니 이용 전에 공식 사이트에서 확인하세요.</p>
+      <p>‘리뷰 기반’ 표시는 직접 사용해 보지 않고 공개 자료와 리뷰로 조사한 서비스예요.</p>
+    </div>
+  </footer>
+
+  <script src="services.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

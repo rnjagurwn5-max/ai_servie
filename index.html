@@ -50,6 +50,26 @@
       </div>
     </div>
 
+    <!-- 월 예산 범위: 두 손잡이를 끌어 최소·최대 예산 조절 -->
+    <section class="budget" aria-labelledby="budget-title">
+      <div class="budget-head">
+        <h2 class="budget-title" id="budget-title">월 예산</h2>
+        <p class="budget-value" id="budget-value" aria-live="polite"></p>
+        <div class="budget-inputs">
+          <label>최소 $<input id="budget-min-input" type="number" inputmode="numeric" min="0" max="300" step="1" aria-label="최소 월 예산 (USD)"></label>
+          <span aria-hidden="true">~</span>
+          <label>최대 $<input id="budget-max-input" type="number" inputmode="numeric" min="0" max="300" step="1" aria-label="최대 월 예산 (USD)"></label>
+          <button type="button" class="budget-reset" id="budget-reset">초기화</button>
+        </div>
+      </div>
+      <div class="budget-slider" id="budget-slider">
+        <div class="budget-track"><div class="budget-fill" id="budget-fill"></div></div>
+        <input id="budget-min" type="range" min="0" max="300" step="1" value="0" aria-label="최소 월 예산">
+        <input id="budget-max" type="range" min="0" max="300" step="1" value="300" aria-label="최대 월 예산">
+      </div>
+      <div class="budget-scale" aria-hidden="true"><span>$0</span><span>$100</span><span>$200</span><span>$300+</span></div>
+    </section>
+
     <h2 class="sr-only">분야별 AI 서비스</h2>
     <section class="grid" id="service-grid" aria-label="서비스 목록"></section>
 

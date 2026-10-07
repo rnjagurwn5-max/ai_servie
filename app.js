@@ -6,7 +6,12 @@ const state = {
   subcategory: "전체",
   pricing: "all",
   query: "",
+  budgetMin: 0,
+  budgetMax: 300,
 };
+
+// 예산 슬라이더 끝값 (최대 손잡이가 여기 있으면 상한 없음)
+const BUDGET_LIMIT = 300;
 
 // =========================================
 // 화면 요소
@@ -37,6 +42,33 @@ function badgeClass(pricing) {
   if (pricing === "무료") return "badge-free";
   if (pricing === "유료") return "badge-paid";
   return "badge-mixed";
+}
+
+// 가격 문구에서 월 요금(USD)만 뽑기
+//  - "※" 참고 문구와 "연 $144" 같은 연 결제 금액은 제외
+//  - 원화·유로는 대략 환산 (₩1,400 = $1, €1 = $1.1)
+//  - 무료 플랜이 있으면 $0 포함
+function getMonthlyPrices(service) {
+  const prices = service.pricing.includes("무료") ? [0] : [];
+  service.price
+    .filter((line) => !line.startsWith("※"))
+    .forEach((line) => {
+      const text = line.replace(/\([^)]*연[^)]*\)/g, "");
+      for (const m of text.matchAll(/(?<!연\s?)([$€₩])\s?([\d,]+(?:\.\d+)?)/g)) {
+        let value = parseFloat(m[2].replaceAll(",", ""));
+        if (m[1] === "₩") value /= 1400;
+        if (m[1] === "€") value *= 1.1;
+        prices.push(value);
+      }
+    });
+  return prices;
+}
+
+// 예산 범위 안에 들어오는 플랜이 하나라도 있으면 통과
+function fitsBudget(service) {
+  const max = state.budgetMax >= BUDGET_LIMIT ? Infinity : state.budgetMax;
+  if (state.budgetMin === 0 && max === Infinity) return true;
+  return getMonthlyPrices(service).some((p) => p >= state.budgetMin && p <= max);
 }
 
 function listItems(items) {
@@ -94,6 +126,7 @@ function getFilteredServices() {
     if (state.category !== "전체" && s.category !== state.category) return false;
     if (state.subcategory !== "전체" && !getStrengths(s).includes(state.subcategory)) return false;
     if (state.pricing !== "all" && s.pricing !== state.pricing) return false;
+    if (!fitsBudget(s)) return false;
     if (!q) return true;
 
     const text = [s.name, s.category, s.summary, s.useCase, ...s.pros, ...getStrengths(s)].join(" ").toLowerCase();
@@ -213,6 +246,53 @@ pricingFilter.addEventListener("click", (e) => {
   renderGrid();
 });
 
+// =========================================
+// 월 예산 슬라이더
+// =========================================
+const budgetMin = document.getElementById("budget-min");
+const budgetMax = document.getElementById("budget-max");
+const budgetMinInput = document.getElementById("budget-min-input");
+const budgetMaxInput = document.getElementById("budget-max-input");
+const budgetFill = document.getElementById("budget-fill");
+const budgetValue = document.getElementById("budget-value");
+
+function renderBudget() {
+  const { budgetMin: min, budgetMax: max } = state;
+  budgetMin.value = min;
+  budgetMax.value = max;
+  budgetMinInput.value = min;
+  budgetMaxInput.value = max;
+  budgetFill.style.left = `${(min / BUDGET_LIMIT) * 100}%`;
+  budgetFill.style.right = `${100 - (max / BUDGET_LIMIT) * 100}%`;
+  // 두 손잡이가 겹쳐도 다시 잡을 수 있게 위쪽 손잡이 바꾸기
+  budgetMin.classList.toggle("is-top", min > BUDGET_LIMIT / 2);
+  budgetValue.textContent = max >= BUDGET_LIMIT
+    ? (min === 0 ? "제한 없음" : `월 $${min} 이상`)
+    : `월 $${min} ~ $${max}`;
+  budgetMax.setAttribute("aria-valuetext", max >= BUDGET_LIMIT ? "제한 없음" : `$${max}`);
+  budgetMin.setAttribute("aria-valuetext", `$${min}`);
+}
+
+function setBudget(min, max, changed) {
+  min = Math.min(Math.max(Math.round(Number(min) || 0), 0), BUDGET_LIMIT);
+  max = Math.min(Math.max(Math.round(Number(max) || 0), 0), BUDGET_LIMIT);
+  // 손잡이가 서로 넘어가지 않게, 움직인 쪽을 멈춤
+  if (min > max) {
+    if (changed === "min") min = max;
+    else max = min;
+  }
+  state.budgetMin = min;
+  state.budgetMax = max;
+  renderBudget();
+  renderGrid();
+}
+
+budgetMin.addEventListener("input", () => setBudget(budgetMin.value, state.budgetMax, "min"));
+budgetMax.addEventListener("input", () => setBudget(state.budgetMin, budgetMax.value, "max"));
+budgetMinInput.addEventListener("change", () => setBudget(budgetMinInput.value, state.budgetMax, "min"));
+budgetMaxInput.addEventListener("change", () => setBudget(state.budgetMin, budgetMaxInput.value, "max"));
+document.getElementById("budget-reset").addEventListener("click", () => setBudget(0, BUDGET_LIMIT));
+
 searchInput.addEventListener("input", () => {
   state.query = searchInput.value;
   renderGrid();
@@ -221,6 +301,9 @@ searchInput.addEventListener("input", () => {
 document.getElementById("reset").addEventListener("click", () => {
   state.query = "";
   state.pricing = "all";
+  state.budgetMin = 0;
+  state.budgetMax = BUDGET_LIMIT;
+  renderBudget();
   searchInput.value = "";
   pricingFilter.querySelectorAll(".chip").forEach((c) => {
     c.classList.toggle("is-active", c.dataset.pricing === "all");
@@ -240,4 +323,5 @@ window.addEventListener("hashchange", () => {
 document.getElementById("total-count").textContent = SERVICES.length;
 document.getElementById("updated-at").textContent = UPDATED_AT;
 readCategoryFromHash();
+renderBudget();
 render();
